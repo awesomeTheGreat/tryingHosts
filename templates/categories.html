@@ -1,0 +1,10 @@
+{% load hosts %}
+
+
+<h2>Categories</h2>
+{% for category in categories %}
+<h3>
+    <li><a href="{% host_url 'category' host 'categoryq' cat=category.slug %}">{{category.name}}</a></li>
+</h3>
+
+{% endfor %}
